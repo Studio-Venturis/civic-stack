@@ -7,3 +7,5 @@
 * [ADR 0003: Do not build a custom CMS](adr-0003-no-custom-cms.md) - Editing, roles, approvals and versioning come from an existing open-source CMS.
 * [ADR 0004: Core bundle plus per-deployment overlays](adr-0004-core-and-overlays.md) - Shared knowledge is upstream and versioned; each municipality's specifics live in a separate overlay bundle.
 * [ADR 0005: Apache License 2.0](adr-0005-license.md) - The repo is licensed Apache 2.0 so governments, vendors and contributors get explicit patent and contribution terms.
+* [ADR 0006: Services are defined once, as OKF concepts](adr-0006-service-definition.md) - Each government service is a single typed concept file that generates pages, forms, queues, structured data and AI tools.
+* [ADR 0007: How AI connects to government services](adr-0007-ai-connection-model.md) - Services are exposed to AI through MCP tools, structured data and a grounded assistant that answers only from reviewed content.

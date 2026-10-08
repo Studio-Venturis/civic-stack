@@ -12,7 +12,8 @@ Open foundation that a government IT department can clone to build accessible, p
 * Reading order for newcomers: `knowledge/process/reading-order.md`.
 * Requirements: `knowledge/requirements/`. Mapping to modules and tests: `docs/compliance-matrix.md`.
 * Standards (USWDS, WCAG, security, records): `knowledge/standards/`.
-* Entities and terms: `knowledge/domain/`.
+* Entities and terms: `knowledge/domain/`. Service format: `knowledge/specs/service-definition.md`.
+* How and why this repo is structured (for engineers): `knowledge/process/scaffolding-method.md`.
 * Repeatable tasks: `knowledge/skills/`.
 * Past failures turned into rules: `knowledge/learnings/`.
 * A municipality's specifics: `deployments/<name>/` (never in core).
@@ -27,12 +28,14 @@ Open foundation that a government IT department can clone to build accessible, p
 * Every requirement has an ID, linked standards, a module and planned or real tests.
 * Read the real schema before writing a query. Migrations are committed files.
 * Presentation changes never change logic.
+* AI features follow `knowledge/standards/ai-guardrails.md`: grounded, cited, no eligibility decisions, always a human hand-off.
 * Ship the smallest working slice. Functions under 40 lines, files under 400.
 
 ## Commands
 
 * `npm run okf:index` regenerate index.md files after adding or renaming concepts.
 * `npm run docs:matrix` regenerate `docs/compliance-matrix.md`.
+* `npm run okf:answerable` list which services an AI assistant may answer from.
 * `npm run check` validate the bundle and confirm the matrix is current. Must pass before commit.
 
 ## Working on knowledge

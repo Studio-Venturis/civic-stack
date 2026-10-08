@@ -12,5 +12,7 @@ okf_version: "0.2"
 * [modules](modules/)
 * [process](process/)
 * [requirements](requirements/)
+* [services](services/)
 * [skills](skills/)
+* [specs](specs/)
 * [standards](standards/)

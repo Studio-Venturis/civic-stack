@@ -9,6 +9,7 @@
   "scripts": {
     "okf:index": "node scripts/okf-index.mjs",
     "okf:validate": "node scripts/validate-okf.mjs",
+    "okf:answerable": "node scripts/answerable-services.mjs",
     "docs:matrix": "node scripts/gen-compliance-matrix.mjs",
     "check": "node scripts/validate-okf.mjs && node scripts/gen-compliance-matrix.mjs --check"
   },

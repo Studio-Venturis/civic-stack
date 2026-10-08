@@ -9,6 +9,7 @@ generated: { by: claude-code/sonnet-5-5, at: 2026-10-08T06:40:00Z }
 
 # Day 0: understand the context before any code
 
+0. Engineers new to this style of project: read [how we scaffold](/process/scaffolding-method.md) first.
 1. `AGENTS.md` for non-negotiables and commands, then [the problem](/domain/problem.md).
 2. [Decisions](/decisions/adr-0001-stack.md) to see why the stack is what it is.
 3. [Standards](/standards/uswds.md), then [accessibility](/standards/wcag-section-508.md) and [security](/standards/security-hosting.md).

@@ -3,6 +3,7 @@
 # Standards
 
 * [ADA Title II web accessibility rule](ada-title-ii.md) - Why accessibility is a legal obligation for state and local government sites, with compliance dates that must be re-verified.
+* [AI guardrails for government services](ai-guardrails.md) - Rules every AI feature in a deployment must follow before it reaches residents.
 * [Public records and privacy](public-records-privacy.md) - Rules for retention, public-records exposure and personal data in government web content.
 * [Security and hosting baseline](security-hosting.md) - Minimum security, hosting, backup and recovery controls every deployment must document.
 * [U.S. Web Design System (USWDS)](uswds.md) - Design-system rules every public-facing UI in this repo must follow.

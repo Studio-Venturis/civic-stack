@@ -87,6 +87,24 @@ function checkRequirement(file, fm, body) {
   if (!/\]\(\/standards\//.test(body) && !/\]\(\/decisions\//.test(body)) warn(file, 'links to no standard or decision');
 }
 
+const SERVICE_ID = /^SVC-[A-Z0-9]+-\d{3}$/;
+const SERVICE_SECTIONS = ['What it is', 'Who can use it', 'Steps', 'Documents needed', 'Fees and timing', 'Help and escalation', 'Not covered'];
+const serviceIds = new Set();
+
+function checkService(file, fm, body) {
+  const stem = path.basename(file, '.md').toUpperCase();
+  if (!SERVICE_ID.test(String(fm.service_id ?? ''))) return err(file, 'service_id must match SVC-<AREA>-<NNN>');
+  if (fm.service_id !== stem) err(file, `service_id ${fm.service_id} must equal filename (${stem})`);
+  if (serviceIds.has(fm.service_id)) err(file, `duplicate service_id ${fm.service_id}`);
+  serviceIds.add(fm.service_id);
+  if (!fm.owner || typeof fm.owner !== 'string') err(file, 'service needs owner');
+  if (!asList(fm.audience).length) err(file, 'service needs audience');
+  if (!asList(fm.channels).length) err(file, 'service needs channels');
+  if (!STATUS.has(fm.status)) err(file, 'service needs status');
+  const headings = [...body.matchAll(/^# (.+)$/gm)].map((m) => m[1].trim());
+  for (const h of SERVICE_SECTIONS) if (!headings.includes(h)) err(file, `service missing section "# ${h}"`);
+}
+
 function checkConcept(file, bundle) {
   const doc = parseDoc(file);
   if (doc.error) return err(file, `unparseable frontmatter: ${doc.error}`);
@@ -96,6 +114,7 @@ function checkConcept(file, bundle) {
   checkLinks(file, doc.body, bundle);
   if (doc.text.split('\n').length > CONCEPT_WARN_LINES) warn(file, `over ${CONCEPT_WARN_LINES} lines; split it`);
   if (doc.fm.type === 'Requirement') checkRequirement(file, doc.fm, doc.body);
+  if (doc.fm.type === 'Service') checkService(file, doc.fm, doc.body);
   if (doc.fm.type === 'Module') moduleNames.add(path.basename(file, '.md'));
 }
 
@@ -136,5 +155,5 @@ else {
 
 for (const w of warnings) console.warn(`warn  ${w}`);
 for (const e of errors) console.error(`error ${e}`);
-console.log(`\n${requirements.size} requirements, ${moduleNames.size} modules, ${errors.length} errors, ${warnings.length} warnings`);
+console.log(`\n${requirements.size} requirements, ${moduleNames.size} modules, ${serviceIds.size} services, ${errors.length} errors, ${warnings.length} warnings`);
 process.exit(errors.length ? 1 : 0);

@@ -7,6 +7,10 @@ One row per requirement. Source of truth is the requirement concept files.
 | ID | Requirement | Status | Verification | Modules | Standards | Tests |
 |---|---|---|---|---|---|---|
 | REQ-A11Y-001 | WCAG 2.1 AA conformance | draft | planned | compliance-ci, cms-core | wcag-section-508, ada-title-ii | `tests/a11y/axe.spec.ts` |
+| REQ-AI-001 | Grounded and cited assistant answers | draft | planned | ai-gateway | ai-guardrails | `tests/unit/answerable-gate.spec.ts` |
+| REQ-AI-002 | Machine-readable service interface | draft | planned | ai-gateway, service-catalog | - | `tests/integration/mcp-tools.spec.ts` |
+| REQ-AI-003 | Audit and retention of AI interactions | draft | planned | ai-gateway | ai-guardrails, public-records-privacy | `tests/unit/ai-audit-log.spec.ts` |
+| REQ-AI-004 | Human escalation and disclosure | draft | planned | ai-gateway | ai-guardrails, wcag-section-508 | `tests/e2e/assistant-escalation.spec.ts` |
 | REQ-CMS-001 | Staff-friendly CMS with roles, approvals and versions | draft | planned | cms-core | security-hosting | `tests/e2e/cms-workflow.spec.ts` |
 | REQ-CONTENT-001 | Content strategy and migration | draft | planned | delivery-kit, cms-core | public-records-privacy | `tests/e2e/redirects.spec.ts` |
 | REQ-DISC-001 | Discovery and planning | draft | planned | delivery-kit | public-records-privacy | `docs/delivery/discovery-guide.md` |
@@ -22,8 +26,9 @@ One row per requirement. Source of truth is the requirement concept files.
 | REQ-INT-001 | Third-party integrations | draft | planned | integrations | security-hosting | `tests/integration/adapters.spec.ts` |
 | REQ-OWN-001 | Ownership, licensing and portability | draft | planned | delivery-kit | - | `docs/delivery/exit-plan.md` |
 | REQ-SEC-001 | Secure hosting, backup and recovery | draft | planned | hosting-ops | security-hosting | `docs/ops/restore-test.md` |
+| REQ-SVC-001 | Services defined once and generated everywhere | draft | planned | service-catalog | uswds | `tests/unit/service-definition.spec.ts` |
 | REQ-TEST-001 | Browser, device, accessibility, performance and acceptance testing | draft | planned | compliance-ci | wcag-section-508 | `tests/e2e/smoke.spec.ts` |
 | REQ-TRAIN-001 | Training, documentation and warranty support | draft | planned | delivery-kit | uswds | `docs/delivery/training-outline.md` |
 | REQ-UX-001 | Responsive UX and visual design | draft | planned | cms-core | uswds, wcag-section-508 | `tests/e2e/templates.spec.ts` |
 
-19 requirements.
+24 requirements.

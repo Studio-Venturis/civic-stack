@@ -16,6 +16,7 @@ generated: { by: claude-code/sonnet-5-5, at: 2026-10-08T06:40:00Z }
 5. RPO, RTO, hosting region and retention classes recorded.
 6. Golden tasks defined (see below) so agents have a measurable first assignment.
 7. `npm run check` passes before work starts.
+8. Services defined as concept files ([format](/specs/service-definition.md)) and checked with `npm run okf:answerable`.
 
 # Golden tasks (planned)
 

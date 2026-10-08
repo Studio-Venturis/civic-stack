@@ -2,6 +2,7 @@
 
 # Modules
 
+* [AI gateway](ai-gateway.md) - MCP server, llms.txt, grounded citizen assistant, provider adapters, audit logging and the answerable-services gate.
 * [Emergency alerts](alerts.md) - Prominent site-wide alerts with an approval path and expiry.
 * [CMS core and page templates](cms-core.md) - Content model, roles, approval workflow, version history and USWDS page templates on an existing CMS.
 * [Compliance CI](compliance-ci.md) - Accessibility scans, bundle validation, requirement-to-test coverage and the compliance matrix.
@@ -14,3 +15,4 @@
 * [Meetings and calendars](meetings.md) - Meeting calendar, agendas, minutes and public meeting information.
 * [News and public notices](news-notices.md) - News items and public notices with expiry, department ownership and accessible templates.
 * [Site search](search.md) - Site-wide search over pages, news, notices and documents.
+* [Service catalog](service-catalog.md) - Loads service definitions and generates service pages, forms, queue entries and structured data.

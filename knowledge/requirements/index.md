@@ -3,6 +3,10 @@
 # Requirements
 
 * [WCAG 2.1 AA conformance](req-a11y-001.md) - Accessible templates and components, keyboard navigation, contrast, alt-text workflows, testing and remediation documentation.
+* [Grounded and cited assistant answers](req-ai-001.md) - The assistant answers only from answerable services and cites the page it used.
+* [Machine-readable service interface](req-ai-002.md) - Services are exposed to AI through MCP tools, structured data and an llms.txt file.
+* [Audit and retention of AI interactions](req-ai-003.md) - Each assistant interaction is logged with the content version used, under a retention class, with personal data redacted.
+* [Human escalation and disclosure](req-ai-004.md) - Users are told they are talking to an automated assistant and can always reach a person.
 * [Staff-friendly CMS with roles, approvals and versions](req-cms-001.md) - Role-based permissions, approval workflows, reusable components and version control for nontechnical staff.
 * [Content strategy and migration](req-content-001.md) - Content inventory, cleanup recommendations, migration from the old site, a redirect plan and quality assurance.
 * [Discovery and planning](req-disc-001.md) - The vendor performs stakeholder interviews, content and audience review, site architecture and implementation planning.
@@ -18,6 +22,7 @@
 * [Third-party integrations](req-int-001.md) - Integration with existing systems identified during discovery, with assumptions and extra costs stated.
 * [Ownership, licensing and portability](req-own-001.md) - Clear ownership and licensing for content, code, themes, data and domains, with exit assistance and data export.
 * [Secure hosting, backup and recovery](req-sec-001.md) - Secure hosting, encryption, monitoring, backups, patching, incident response and disaster recovery with stated objectives.
+* [Services defined once and generated everywhere](req-svc-001.md) - Each service is described in one definition file that generates its page, form, queue entry and structured data.
 * [Browser, device, accessibility, performance and acceptance testing](req-test-001.md) - Testing across browsers and devices, plus accessibility, performance and user acceptance testing.
 * [Training, documentation and warranty support](req-train-001.md) - Administrator and editor training, written documentation, warranty and maintenance options.
 * [Responsive UX and visual design](req-ux-001.md) - Responsive page templates, navigation, wireframes, prototypes and design revisions.
