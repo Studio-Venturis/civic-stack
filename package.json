@@ -1,0 +1,18 @@
+{
+  "name": "civic-stack",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Open foundation for city and county web services, with an OKF knowledge bundle that gives agents and engineers shared context from day 1.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "okf:index": "node scripts/okf-index.mjs",
+    "okf:validate": "node scripts/validate-okf.mjs",
+    "docs:matrix": "node scripts/gen-compliance-matrix.mjs",
+    "check": "node scripts/validate-okf.mjs && node scripts/gen-compliance-matrix.mjs --check"
+  },
+  "devDependencies": {
+    "yaml": "^2.5.0"
+  }
+}

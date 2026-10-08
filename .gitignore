@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Real deployments stay private; only the template is public.
+deployments/*
+!deployments/_template/
